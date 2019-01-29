@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+{% block title %}
+{% include 'mainapp/includes/header.html' %}
+{% endblock %}
+</title>
+</head>
+ <body>
+	<div class="container">
+	     {% block Navigate_bar %}
+        <div class="header clearfix">
+				<a href="{% url 'main' %}" class="logo"></a>
+				<ul class="menu">
+					<li><a href="{% url 'main' %}" class="active">домой</a></li>
+					<li><a href="{% url 'catalog' %}">продукты</a></li>
+					<li><a href="{% url 'feedback' %}">контакты</a></li>
+				</ul>
+				 <a href="#" class="search"></a>
+        </div>
+        {% endblock %}
+
+         <div class="content">
+            {% block content %}
+             {% endblock %}
+        </div>
+
+ 		<div class="clr"></div>
+
+ 	</div>
+
+     {% block footer %}
+    {% include 'mainapp/includes/footer.html' %}
+    {% endblock %}
+
+
+
+
+ </body>
+</html>
+
+
