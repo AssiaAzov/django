@@ -1,0 +1,14 @@
+<ul class="links-menu">
+    <li>
+        <a href="/catalog/0/">
+            все
+        </a>
+    </li>
+    {% for link in links_menu %}
+        <li>
+            <a href="/catalog/{{ link.pk }}/">
+                {{ link.name }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
